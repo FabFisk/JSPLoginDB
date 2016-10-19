@@ -47,7 +47,48 @@ public class UtenteBeanDAO {
 			return u;
 		}
 		
-		public UtenteBean readUtente(String user, String psw){
+		public UtenteBean readUtenteUser(String username) {
+			UtenteBean u = null;
+			Session session = HibernateUtil.openSession();
+			Transaction tx = null;
+			try {
+				tx = session.getTransaction();
+				tx.begin();
+				Query query = session
+						.createQuery("from UtenteBean where username=:userInserito");
+				query.setString("userInserito", username);
+				u = (UtenteBean) query.uniqueResult();
+				tx.commit();
+			} catch (Exception ex) {
+				tx.rollback();
+			} finally {
+				session.close();
+			}
+			return u;
+		}
+		
+		public UtenteBean readUtenteNomeCognome(String nome, String cognome){
+			UtenteBean u = null;
+			Session session = HibernateUtil.openSession();
+			Transaction tx = null;
+			try {
+				tx = session.getTransaction();
+				tx.begin();
+				Query query = session
+						.createQuery("from UtenteBean where nome=:nomeInserito and cognome=:cognomeInserito ");
+				query.setString("nomeInserito", nome);
+				query.setString("cognomeInserito", cognome);
+				u = (UtenteBean) query.uniqueResult();
+				tx.commit();
+			} catch (Exception ex) {
+				tx.rollback();
+			} finally {
+				session.close();
+			}
+			return u;
+		}
+		
+		public UtenteBean readUtenteUserPsw(String user, String psw){
 			UtenteBean u = null;
 			Session session = HibernateUtil.openSession();
 			Transaction tx = null;
@@ -105,5 +146,4 @@ public class UtenteBeanDAO {
 			}
 			return res;
 		}
-
 }
