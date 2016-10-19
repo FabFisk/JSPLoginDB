@@ -15,20 +15,22 @@
     		if(s.cercaUtenteUserPsw(user.getUsername(), user.getPassword())){
     			//se l'utente è registrato
     %>
+    
     <% 	   			
     		}else{
     			//user o psw errati
     %>
+    
     <% 	    			
     		}
     %>
+    
     <% 	   		
     	}else {
     		//campi non validi
     %>
+    
     <% 		
-    	}
-    		
-    			
+    	}    			
     %>
 		
