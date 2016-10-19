@@ -11,8 +11,8 @@
 <!-- Connessione al DB - Driver/URL/USER/PSW -->
 		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
 		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
-		<property name="connection.username">biblioteca</property>
-		<property name="connection.password">biblioteca</property>
+		<property name="connection.username">JSPLoginDB</property>
+		<property name="connection.password">corso</property>
 		
 		<!-- JDBC connection pool (use the built-in) -->
 <!-- Connection Pool già inclueso -->
@@ -32,9 +32,9 @@
 		
 		<!-- Drop and re-create the database schema on startup -->
 <!-- Comportamento all'avvio -->
-		<property name="hbm2ddl.auto">create</property>
+		<property name="hbm2ddl.auto">update</property>
 		
 <!-- Inserire riga di mapping per ogni classe da mappare -->
-		<mapping class="model.Biblioteca" />
+		<mapping class="it.alfasoft.fabrizio.bean.UtenteBean" />
 	</session-factory>
 </hibernate-configuration>
