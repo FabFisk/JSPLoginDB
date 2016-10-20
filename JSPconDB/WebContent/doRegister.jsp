@@ -17,7 +17,7 @@
     				utente.setPassword(psw);
     				s.registraUtente(utente);
     %>
-   		<jsp:forward page="login.jsp">
+   		<jsp:forward page="registrato.jsp">
     <%				
     			}else{
     				//username non disponibile
