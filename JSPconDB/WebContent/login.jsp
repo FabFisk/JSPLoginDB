@@ -13,6 +13,7 @@
 <input type="text" name="username" placeholder="Username"/>
 <input type="password" name="password" placeholder="Password"/>
 <input type="hidden" name="call" value="2"/>
+<!--  Questo input non viene visualizzato dalll'utente e viene riempito solo al click del submit -->
 <input type="submit" value="Login!"/>
 </form>
 <%=msg.getMessaggio() %>

@@ -8,10 +8,12 @@
     <%
     	Service s = new Service();
      if(request.getParameter("call")==null){
+    	 //controllo il campo hidden, se è nulla significa che è la prima request
    	%> 		
     	 <jsp:forward page="login.jsp"/>
     <% 
      }else{
+    	 //campo hidden non nullo, quindi request passata tramite form
     	if(user.isValid2()){
     		//se i campi sono validi/decripta password
     			String psw = s.codificaPsw(user.getPassword());
