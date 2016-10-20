@@ -1,5 +1,8 @@
 package it.alfasoft.fabrizio.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -29,6 +32,26 @@ public class UtenteBeanDAO {
 		}
 		
 		//2- Read
+		
+		@SuppressWarnings("unchecked")
+		public List<UtenteBean> getAll() {
+			List<UtenteBean> list = new ArrayList<UtenteBean>();
+			Session session = HibernateUtil.openSession();
+			Transaction tx = null;
+			try {
+				tx = session.getTransaction();
+				tx.begin();
+				Query query = session
+						.createQuery("from UtenteBean ");
+				list = (List<UtenteBean>) query.uniqueResult();
+				tx.commit();
+			} catch (Exception ex) {
+				tx.rollback();
+			} finally {
+				session.close();
+			}
+			return list;
+		}
 		
 		public UtenteBean readUtente(long id_u){
 			UtenteBean u = null;

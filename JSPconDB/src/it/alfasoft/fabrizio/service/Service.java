@@ -1,6 +1,7 @@
 package it.alfasoft.fabrizio.service;
 
 import java.security.MessageDigest;
+import java.util.List;
 
 import it.alfasoft.fabrizio.bean.UtenteBean;
 import it.alfasoft.fabrizio.dao.UtenteBeanDAO;
@@ -50,6 +51,10 @@ public class Service {
 		} catch (java.security.NoSuchAlgorithmException e) {
 		}
 		return null;
+	}
+	
+	public List<UtenteBean> getAll(){
+		return uDAO.getAll();
 	}
 
 }
