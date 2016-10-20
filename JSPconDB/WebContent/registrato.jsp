@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>registrato</h1>
+<h1>Registrato</h1>
+<form action="login.jsp">
+    <input type="submit" value="Login Page" />
+</form>
 </body>
 </html>

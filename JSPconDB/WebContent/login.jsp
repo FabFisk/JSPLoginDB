@@ -14,7 +14,11 @@
 <input type="password" name="password" placeholder="Password"/>
 <input type="submit" value="Login!"/>
 </form>
-<% out.println(msg.getMessaggio()); %>
+<%=msg.getMessaggio() %>
+
+<form action="register.jsp">
+    <input type="submit" value="Registrati" />
+</form>
 
 
 </body>
