@@ -15,21 +15,18 @@
     		if(s.cercaUtenteUserPsw(user.getUsername(), user.getPassword())){
     			//se l'utente è registrato
     %>
-    
+    	<jsp:forward page="welcome.jsp"/>
     <% 	   			
     		}else{
     			//user o psw errati
     %>
-    
+    	<jsp:forward page="login.jsp"/>
     <% 	    			
-    		}
-    %>
-    
-    <% 	   		
+    		} 		
     	}else {
     		//campi non validi
     %>
-    
+    	<jsp:forward page="login.jsp"/>
     <% 		
     	}    			
     %>

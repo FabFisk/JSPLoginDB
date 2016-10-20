@@ -17,23 +17,23 @@
     				utente.setPassword(psw);
     				s.registraUtente(utente);
     %>
-   		<jsp:forward page="welcome.jsp">
+   		<jsp:forward page="login.jsp">
     <%				
     			}else{
     				//username non disponibile
     %>		
-    	<jsp:forward page="login.jsp">	
+    	<jsp:forward page="register.jsp">	
     <%			}
     		}else{
     			//utente gia registrato
     %>		
-    	<jsp:forward page="login.jsp">	
+    	<jsp:forward page="register.jsp">	
     <%
     		}
     	}else{
     		//campi non validi
     %>		
-    	<jsp:forward page="login.jsp">	
+    	<jsp:forward page="register.jsp">	
     <%
     	}
    	%>			
