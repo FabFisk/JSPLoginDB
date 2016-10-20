@@ -67,4 +67,14 @@ public class UtenteBean implements Serializable, DataBean {
 		
 		return token;
 	}
+	
+	public boolean isValid2() {
+		boolean token = false;
+		if(!this.username.isEmpty() &&
+				!this.password.isEmpty()){
+			token = true;
+		}
+		
+		return token;
+	}
 }

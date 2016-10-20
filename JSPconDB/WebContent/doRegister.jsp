@@ -4,7 +4,7 @@
    
     <jsp:useBean id="utente" class="it.alfasoft.fabrizio.bean.UtenteBean" scope="request"/>
     <jsp:setProperty property="*" name="utente"/>
-    
+    <jsp:useBean id="msg" class="it.alfasoft.fabrizio.bean.MessaggioBean" scope="request"/>
     <%
     	Service s = new Service();    
     	if(utente.isValid()){
@@ -17,23 +17,26 @@
     				utente.setPassword(psw);
     				s.registraUtente(utente);
     %>
-   		<jsp:forward page="registrato.jsp">
+   		<jsp:forward page="registrato.jsp"/>
     <%				
     			}else{
     				//username non disponibile
+    				msg.usermaneEsiste();
     %>		
-    	<jsp:forward page="register.jsp">	
+    	<jsp:forward page="register.jsp"/>	
     <%			}
     		}else{
     			//utente gia registrato
+    			msg.userEsiste();
     %>		
-    	<jsp:forward page="register.jsp">	
+    	<jsp:forward page="register.jsp"/>	
     <%
     		}
     	}else{
     		//campi non validi
+    		msg.campiNonValidi();
     %>		
-    	<jsp:forward page="register.jsp">	
+    	<jsp:forward page="register.jsp"/>	
     <%
     	}
    	%>			
