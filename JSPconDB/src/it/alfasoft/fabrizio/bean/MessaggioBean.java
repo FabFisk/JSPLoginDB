@@ -9,7 +9,7 @@ public class MessaggioBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private String messaggio = "";
+	private String messaggio = "Prima request!";
 	
 	public MessaggioBean(){}
 
@@ -35,6 +35,4 @@ public class MessaggioBean implements Serializable {
 	public void campiNonValidi(){
 		this.messaggio = "Devi compilare tutti i campi!";
 	}
-	
-
 }

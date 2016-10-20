@@ -7,6 +7,7 @@
     <jsp:useBean id="msg" class="it.alfasoft.fabrizio.bean.MessaggioBean" scope="request"/>
     <%
     	Service s = new Service();
+     if(msg.getMessaggio().equals("Prima request!")){
     	if(user.isValid2()){
     		//se i campi sono validi/decripta password
     			String psw = s.codificaPsw(user.getPassword());
@@ -29,6 +30,11 @@
     %>
     	<jsp:forward page="login.jsp"/>
     <% 		
-    	}    			
+    	}    	
+     }else{
+    %>
+       	<jsp:forward page="login.jsp"/> 
+    <% 		 
+     }
     %>
 		
