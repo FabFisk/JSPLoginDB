@@ -12,6 +12,7 @@
 <form action="doLogin.jsp" method="post">
 <input type="text" name="username" placeholder="Username"/>
 <input type="password" name="password" placeholder="Password"/>
+<input type="hidden" name="call" value="2"/>
 <input type="submit" value="Login!"/>
 </form>
 <%=msg.getMessaggio() %>

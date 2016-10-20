@@ -9,11 +9,9 @@ public class MessaggioBean implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private String messaggio;
+	private String messaggio = "";
 	
-	public MessaggioBean(){
-		this.messaggio = "Prima request!";
-	}
+	public MessaggioBean(){}
 
 	public String getMessaggio() {
 		return messaggio;
