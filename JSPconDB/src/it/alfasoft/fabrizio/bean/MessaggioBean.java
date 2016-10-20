@@ -1,6 +1,13 @@
 package it.alfasoft.fabrizio.bean;
 
-public class MessaggioBean {
+import java.io.Serializable;
+
+public class MessaggioBean implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	
 	private String messaggio = "";
 	
