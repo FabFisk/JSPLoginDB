@@ -1,4 +1,3 @@
-<%@page import="java.util.List"%>
 <%@page import="it.alfasoft.fabrizio.bean.UtenteBean"%>
 <%@page import="it.alfasoft.fabrizio.service.Service"%>
 
@@ -42,34 +41,5 @@
 		}
 		%>
 	</table>
-	
-	
-	<%
-	
-	List<UtenteBean> lista = s.getAll();
-	for(UtenteBean uTemp : lista){
-		u.setCognome(uTemp.getCognome());
-		u.setNome(uTemp.getNome());
-		u.setUsername(uTemp.getUsername());
-	}
-	%>
-	<table>
-		<tbody>
-			<tr>
-				<th>Nome</th>
-				<th>Cognome</th>
-				<th>Username</th>
-			</tr>
-			<c:forEach items="lista" var="UT">
-				<tr>
-					<td><c:out value="${UT.nome}"></c:out></td>
-					<td><c:out value="${UT.cognome}"></c:out></td>
-					<td><c:out value="${UT.username}"></c:out></td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-
-
 </body>
 </html>
