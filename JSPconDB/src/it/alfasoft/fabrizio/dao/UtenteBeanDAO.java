@@ -43,7 +43,7 @@ public class UtenteBeanDAO {
 				tx.begin();
 				Query query = session
 						.createQuery("from UtenteBean ");
-				list = (List<UtenteBean>) query.uniqueResult();
+				list = query.list();
 				tx.commit();
 			} catch (Exception ex) {
 				tx.rollback();

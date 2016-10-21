@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Home Page</h1>
-<a href="elencoUtenti.jsp"></a>
+<a href="elencoUtenti.jsp">X</a>
 
 </body>
 </html>
