@@ -11,5 +11,7 @@
 <body>
 <h1>Benvenuto</h1>
 <c:out value="${user.username}" />
+
+<a href="doLogout.jsp">LOGOUT!</a>
 </body>
 </html>
