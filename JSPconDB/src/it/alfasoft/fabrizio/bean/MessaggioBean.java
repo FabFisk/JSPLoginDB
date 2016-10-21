@@ -35,4 +35,8 @@ public class MessaggioBean implements Serializable {
 	public void campiNonValidi(){
 		this.messaggio = "Devi compilare tutti i campi!";
 	}
+	
+	public void logout(){
+		this.messaggio = "Sei stato disconnesso!";
+	}
 }

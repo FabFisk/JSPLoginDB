@@ -5,5 +5,5 @@
 <jsp:useBean id="msg" class="it.alfasoft.fabrizio.bean.MessaggioBean"
 	scope="request" />
 <c:remove var="user"/>
-<<c:set var="msg" value="Sei stato disconnesso!"/>
+<% msg.logout(); %>
 <jsp:forward page="login.jsp"/>
